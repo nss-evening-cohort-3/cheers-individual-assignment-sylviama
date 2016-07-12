@@ -9,11 +9,20 @@ namespace Cheers
     {
         public static void Main(string[] args)
         {
+            //name question
             Console.WriteLine("What's your name?");
             Console.Write(">");
             string name;
+            name=Console.ReadLine().ToLower();
+
+            //birthday question
+            Console.WriteLine("What's your birthday?");
+            Console.Write(">");
+            string the_birthday;
+            the_birthday=Console.ReadLine();
+
+            //name output
             string require_an="aeiolnfshrmx";
-            name=Console.ReadLine();
             string a_name="a";
             for(int i=0;i<name.Length;i++){
                 if(require_an.IndexOf(name[i])>-1){
@@ -22,9 +31,12 @@ namespace Cheers
                     a_name= "a";
                 }
                 Console.WriteLine("give me " + a_name +" "+ name[i]);
-                
             }
             Console.WriteLine(name.ToUpper() + " is granted.");
+
+            //birthday output
+            DateTime thisDay = DateTime.Today;
+            Console.WriteLine(thisDay);
         }
     }
 }
