@@ -16,13 +16,13 @@ namespace Cheers
             name=Console.ReadLine();
             string a_name="a";
             for(int i=0;i<name.Length;i++){
-                for(int j=0;j<require_an.Length;i++){
-            // foreach(char element in name){
-                    if(name[i]== require_an[j]){
-                        a_name= "an";
-                    }
+                if(require_an.IndexOf(name[i])>-1){
+                    a_name= "an";
+                }else{
+                    a_name= "a";
                 }
                 Console.WriteLine("give me " + a_name +" "+ name[i]);
+                
             }
             Console.WriteLine(name.ToUpper() + " is granted.");
         }
