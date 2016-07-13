@@ -36,11 +36,7 @@ namespace Cheers
 
             //birthday output
             DateTime thisDay = DateTime.Today;
-            // string thisDay2=String.Format("{0:d}",thisDay);
-            // Console.Write(thisDay2);
             DateTime con_birthday=Convert.ToDateTime(the_birthday);
-            // string con_birthday2=String.Format("{0:d}",con_birthday);
-            // Console.Write(con_birthday);
             TimeSpan t=con_birthday-thisDay;
             Console.WriteLine("Your birthday is "+ t.Days+ " day(s) away!");
         }
